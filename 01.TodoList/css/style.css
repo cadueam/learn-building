@@ -1,0 +1,102 @@
+:root {
+  --roxo-escuro: #2d142c;
+  --roxo-medio: #510a32;
+  --vermelho-claro: #c72c41;
+  --laranja: #ee4540;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--roxo-escuro);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#todo-list-composition {
+  overflow: hidden;
+  max-width: 800px;
+  min-width: 258px;
+  width: 75%;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: -6px 9px 42px 4px rgba(28, 12, 27, 0.95);
+  -webkit-box-shadow: -6px 9px 42px 4px rgba(28, 12, 27, 0.95);
+  -moz-box-shadow: -6px 9px 42px 4px rgba(28, 12, 27, 0.95);
+  margin: 3rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#title {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn-delete {
+}
+
+#task {
+  height: 100%;
+  max-width: 100%;
+  padding: 0.5rem;
+  background-color: var(--laranja);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow: auto;
+  animation: 1s animate-task-in cubic-bezier(0.32, 0, 0.01, 1);
+}
+
+#submit {
+  cursor: pointer;
+  border: none;
+  background-color: var(--laranja);
+  color: #fff;
+  width: 100%;
+  border-radius: 5px;
+}
+
+#submit:hover {
+  background-color: var(--vermelho-claro);
+  transition: all 1s cubic-bezier(0.32, 0, 0.01, 1);
+}
+
+#input-task {
+  padding: 0.25rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+#task-id {
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#all-tasks-submited {
+  display: grid;
+  gap: 0.3rem;
+  overflow: hidden;
+
+  grid-template-rows: repeat(auto-fill, 80px);
+}
+
+@keyframes animate-task-in {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

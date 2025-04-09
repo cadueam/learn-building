@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Just TO-DO it.</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section id="todo-list-composition">
+      <h1 id="title">Just Todo It.</h1>
+      <div id="input-btn-layout">
+        <input
+          type="text"
+          name="task-input"
+          placeholder="Just insert the task..."
+          id="input-task"
+        />
+        <label for="task-input">
+          <button type="submit" id="btn-submittask">Submit Task</button></label
+        >
+      </div>
+      <section id="all-tasks-submited">
+        <div class="task" id="task">
+          <p id="task-id">
+            #001<span
+              ><button type="submit" class="btn-delete">Delete</button></span
+            >
+          </p>
+          <p id="task-title">Cuidar dos Gatos</p>
+        </div>
+      </section>
+    </section>
+  </body>
+
+  <script src="js/main.js"></script>
+</html>
