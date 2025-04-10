@@ -15,7 +15,7 @@ body {
   align-items: center;
 }
 
-#todo-list-composition {
+#todo-app {
   overflow: hidden;
   max-width: 800px;
   min-width: 258px;
