@@ -13,7 +13,9 @@ const returnAllTask = function (arr) {
     console.log(returnHTML);
   });
 };
+
 //TODO: TAREFAS ESTÃO DUPLICANDO, 1 + 1 + 2
+
 class Tarefas {
   constructor(task, data, id) {
     this.tarefa = task;

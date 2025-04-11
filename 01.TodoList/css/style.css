@@ -5,8 +5,6 @@
   --laranja: #ee4540;
 }
 
-/*TODO: MUDAR WIDTH DAS TAREFAS, ATUALIZAR CORRETAMENTE*/
-
 body {
   height: 100vh;
   width: 100vw;
@@ -43,8 +41,6 @@ body {
 }
 
 #task {
-  height: 100%;
-  max-width: 100%;
   padding: 0.5rem;
   background-color: var(--laranja);
   border-radius: 5px;
@@ -53,6 +49,27 @@ body {
   justify-content: space-evenly;
   overflow: auto;
   animation: 1s animate-task-in cubic-bezier(0.32, 0, 0.01, 1);
+}
+
+/* TODO: Fowards remove animaçao total do restante */
+
+#input-btn-layout {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+}
+
+#btn-submittask {
+  border-style: none;
+  background: none;
+  color: #f2f2f2;
+  border: solid 1px white;
+  border-radius: 5px;
 }
 
 #submit {
@@ -84,12 +101,13 @@ body {
   justify-content: space-between;
 }
 
-#all-tasks-submited {
+#all-tasks {
   display: grid;
-  gap: 0.3rem;
-  overflow: hidden;
-
-  grid-template-rows: repeat(auto-fill, 80px);
+  overflow: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
 }
 
 @keyframes animate-task-in {
