@@ -6,14 +6,6 @@ const task = document.querySelectorAll("taskfield");
 
 const taskArr = [];
 
-const returnAllTask = function (arr) {
-  arr.forEach((task) => {
-    let returnHTML = task.returnTask();
-    taskField.innerHTML += returnHTML;
-    console.log(returnHTML);
-  });
-};
-
 //TODO: TAREFAS ESTÃO DUPLICANDO, 1 + 1 + 2
 
 class Tarefas {
@@ -23,21 +15,27 @@ class Tarefas {
     this.id = id;
   }
   returnTask() {
-    let htmlForTask = ` <div class="task" id="task">
+    let createDiv = document.createElement("div");
+    createDiv.className = "task";
+    createDiv.Id = "task";
+
+    createDiv.innerHTML = `
           <p id="task-id">${this.id}<span><button type="submit" class="btn-delete" id="btn-delete">
                 Delete
               </button></span>
           </p>
           <p id="task-title">${this.tarefa}</p>
         </div>`;
-    return htmlForTask;
+    taskField.appendChild(createDiv);
+    return createDiv;
   }
 }
 
+//TODO: ADD SCRIPT TO DEL BTN , LOOP ARR SEE WICH DEL WAS PRESSED AND DELETE ITS DIV
+
 btnsubmitTask.addEventListener("click", () => {
   let taskValue = inputTask.value;
-  let newTask = new Tarefas(taskValue);
+  let newTask = new Tarefas(taskValue, "0", taskArr.length + 1);
   let sendTask = taskArr.push(newTask);
-  console.log(taskArr);
-  returnAllTask(taskArr);
+  newTask.returnTask();
 });

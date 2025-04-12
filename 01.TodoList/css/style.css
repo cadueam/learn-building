@@ -40,7 +40,7 @@ body {
 .btn-delete {
 }
 
-#task {
+.task {
   padding: 0.5rem;
   background-color: var(--laranja);
   border-radius: 5px;
@@ -48,7 +48,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   overflow: auto;
-  animation: 1s animate-task-in cubic-bezier(0.32, 0, 0.01, 1);
+  animation: animate-task-in 1s cubic-bezier(0.32, 0, 0.01, 1);
 }
 
 /* TODO: Fowards remove animaçao total do restante */
