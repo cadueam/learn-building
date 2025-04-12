@@ -16,7 +16,7 @@ body {
 }
 
 #todo-app {
-  overflow: hidden;
+  height: 500px;
   max-width: 800px;
   min-width: 258px;
   width: 75%;
@@ -41,13 +41,15 @@ body {
 }
 
 .task {
+  overflow: auto;
+  height: 100px;
   padding: 0.5rem;
   background-color: var(--laranja);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  overflow: auto;
+
   animation: animate-task-in 1s cubic-bezier(0.32, 0, 0.01, 1);
 }
 
@@ -55,7 +57,7 @@ body {
 
 #input-btn-layout {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   gap: 1rem;
 }
 
