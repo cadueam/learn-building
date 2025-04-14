@@ -3,9 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
+    <title>Guess my Number</title>
+    <link rel="stylesheet" href="css/global.css" />
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="precionnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Limelight&display=swap" rel="stylesheet">
   </head>
-  <body></body>
+  <body>
+    <section class="game">
+      <h1 class="main-title">Guess the number!</h1>
+      <p class="sub-title">Between</br> 0 and 151</p>
+      <div class="interactive-box">
+        <img src="" alt="" class="pokemon" />
+        <div class="number-select">
+          <p class="triangle">/\</p>
+          <p class="triangle">\/</p>
+        </div>
+        <p class="number">50</p>
+      </div>
+      <div class="gamestatus">
+        <p class="guesses">Guesses: 10</p>
+        <button type="submit" class="btnguess">Guess!</button>
+        <p class="chances">Chances: 5</p>
+      </div>
+    </section>
+  </body>
   <script src="js/main.js"></script>
 </html>
