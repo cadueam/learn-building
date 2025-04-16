@@ -24,18 +24,6 @@ class Tarefas {
           <p id="task-title">${this.tarefa}</p>
         </div>`;
     taskField.appendChild(createDiv);
-
-    const deleteBtn = createDiv.querySelector(".btn-delete");
-    deleteBtn.addEventListener("click", () => {
-      createDiv.remove();
-
-      const taskIndex = taskArr.findIndex((item) => item.id === this.id);
-      if (taskIndex !== -1) {
-        taskArr.splice(taskIndex, 1);
-      }
-
-      console.log("Tarefa deletada. Estado atual do array:", taskArr);
-    });
     return createDiv;
   }
 }
@@ -55,9 +43,8 @@ btnsubmitTask.addEventListener("click", () => {
     return alert("We need an input");
   } else {
     let newTask = new Tarefas(taskValue, "0", taskArr.length + 1);
-    taskArr.push(newTask);
-    newTask.returnTask();
-    inputTask.value = "";
+    let sendTask = taskArr.push(newTnewTask.returnTask()o;ask);
+    
   }
 });
 
